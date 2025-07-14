@@ -1,4 +1,4 @@
-// src/App.jsx
+
 import { useState, useEffect } from 'react';
 import { DndContext, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
@@ -26,7 +26,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [newTaskContent, setNewTaskContent] = useState('');
 
-  // Load/Save state to localStorage
+  
   useEffect(() => {
     const savedTasks = localStorage.getItem('kanbanTasks');
     if (savedTasks) {
@@ -62,7 +62,6 @@ function App() {
       return;
     }
 
-    // Dropping over another task
     const overTask = tasks.find(t => t.id === overId);
     if (activeTask && overTask) {
       setTasks(currentTasks => {
@@ -82,7 +81,7 @@ function App() {
     if (!newTaskContent.trim()) return;
     
     const newTask = {
-      id: uuidv4(), // Use uuid for truly unique IDs
+      id: uuidv4(),
       columnId: 'col1',
       content: newTaskContent
     };

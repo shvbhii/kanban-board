@@ -13,7 +13,7 @@ This project is Day 14 of my **#30DaysOfVibeCoding** challenge.
 
 Organize your life with the live, deployed version of the application on Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://demo.vercel.app)
+[![Deploy with Vercel](https://vercel.com/button)](https://kanban-board-rho-eight.vercel.app/)
 
 
 ---

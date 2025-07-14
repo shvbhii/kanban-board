@@ -1,4 +1,4 @@
-// src/components/Column.jsx
+
 import { SortableContext, useSortable } from '@dnd-kit/sortable';
 import TaskCard from './TaskCard';
 
