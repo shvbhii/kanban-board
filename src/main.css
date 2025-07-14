@@ -1,0 +1,181 @@
+/* src/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  --bg-color: #101010;
+  --column-bg: #1A1A1A;
+  --card-bg: #2A2A2A;
+  --text-primary: #EAEAEA;
+  --text-secondary: #A0A0A0;
+  --header-color: #FFFFFF;
+  --button-bg: #4A4A4A;
+  --button-hover: #5A5A5A;
+  --border-color: #3A3A3A;
+  --accent-color: #007AFF;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.app-header h1 {
+  font-size: 2.5rem;
+  color: var(--header-color);
+  font-weight: 700;
+  margin: 0;
+}
+.app-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.add-task-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 10px;
+}
+.add-task-form input {
+  width: 350px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.add-task-form input:focus {
+  border-color: var(--accent-color);
+}
+.add-task-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.add-task-form button:hover {
+  background-color: var(--button-hover);
+}
+
+.board-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  /* width: 100%; */ /* <-- THIS LINE WAS REMOVED. THIS IS THE FIX. */
+}
+
+.column {
+  background-color: var(--column-bg);
+  border-radius: 8px;
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+.column h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-secondary);
+}
+
+.task-list {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.task-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  user-select: none;
+  cursor: grab;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.task-card:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER STYLES --- */
+.footer-container {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.social-link:hover {
+  color: var(--accent-color);
+}
+
+.creator-credit p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
